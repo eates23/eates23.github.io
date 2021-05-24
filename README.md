@@ -1,28 +1,11 @@
-# Vitesse
+# My Personal Page
 
-Vite + Svelte template with good stuffs.
+Based on my vitesse template.
 
 ---
 
-First initialize get this repo with `degit`.
+For deploy gh-pahes
 
 ```sh
-degit https://github.com/rytsh/vitesse.git#main my-new-project
-```
-
-```sh
-cd my-new-project
-pnpm install
-```
-
-Run project
-
-```sh
-PORT=3003 pnpm run dev
-```
-
-Build
-
-```sh
-pnpm build
+pnpm run pages
 ```
