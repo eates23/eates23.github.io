@@ -53,6 +53,7 @@ export let href = "";
 div {
   align-items: center;
   display: flex;
+  padding-bottom: 10px;
 }
 
 </style>

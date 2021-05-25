@@ -21,12 +21,12 @@ onMount(() => {
   <span bind:this={text}/>
   <span class="socialw">
     <a href="https://www.linkedin.com/in/rytsh/" target="_blank" class="social">
-      <Icon icon="linkedin" height=32 width=32/>
-      <span>Linkedin</span>
+      <Icon icon="linkedin" height=32 width=32 style="float: left;"/>
+      <span class="txt">Linkedin</span>
     </a>
     <a href="https://github.com/rytsh" target="_blank" class="social">
-      <Icon icon="github" height=32 width=32/>
-      <span>Github</span>
+      <Icon icon="github" height=32 width=32 style="float: left;"/>
+      <span class="txt">Github</span>
     </a>
   </span>
 </div>
@@ -45,21 +45,22 @@ div {
 }
 
 .social {
-  align-items: center;
   cursor: pointer;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
 
   &:hover {
     color: var(--red);
     fill: var(--red);
   }
+
+  .txt {
+    float: left;
+    line-height: 32px;
+    padding: 0 10px;
+  }
 }
 
 .socialw {
   display: flex;
-  gap: 10px;
   justify-content: center;
   margin-top: 10px;
 }

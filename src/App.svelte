@@ -36,11 +36,11 @@ import Projects from "@/components/Projects.svelte";
 .bottom {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 .top {
   border-bottom: 2px solid var(--black);
+  margin-bottom: 10px;
   padding: 10px 0;
 }
 
@@ -64,6 +64,10 @@ import Projects from "@/components/Projects.svelte";
   flex-basis: 0;
   flex-grow: 1;
   min-width: 280px;
+}
+
+.bottom {
+  gap: 10px;
 }
 
 </style>

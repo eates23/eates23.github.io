@@ -20,6 +20,7 @@ export let width = "24";
 
 export let className: string = undefined;
 export let position: PosTypes = undefined;
+export let style: string = undefined;
 
 const totalClass = [className, position].join(" ");
 </script>
@@ -28,6 +29,7 @@ const totalClass = [className, position].join(" ");
   class={totalClass ? totalClass : undefined}
   width="{width}"
   height="{height}"
+  style={style}
   viewBox="0 0 24 24">
   <path d={IconTypes[icon]}/>
 </svg>
