@@ -1,5 +1,4 @@
 <script>
-// import Canvas from "@/components/Canvas.svelte";
 import Info from "@/components/Info.svelte";
 import Links from "@/components/Links.svelte";
 import Projects from "@/components/Projects.svelte";
@@ -7,9 +6,6 @@ import Projects from "@/components/Projects.svelte";
 
 <div class="main">
   <div class="top">
-    <!-- <div class="canvas">
-      <Canvas/>
-    </div> -->
     <div class="info">
       <Info/>
     </div>
