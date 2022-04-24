@@ -6,10 +6,9 @@ module.exports = {
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    // add these parser options
-    // "tsconfigRootDir": __dirname,
-    // "project": ["./tsconfig.json"],
-    "extraFileExtensions": [".svelte"],
+    "tsconfigRootDir": __dirname,
+    "project": ["./tsconfig.json"],
+    "extraFileExtensions": [".svelte", ".html"],
   },
   "extends": [
     "eslint:recommended",
@@ -29,7 +28,7 @@ module.exports = {
     "svelte3/ignore-styles": () => true,
   },
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "new-cap": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "object-curly-spacing": ["error", "always"],

@@ -1,37 +1,28 @@
-@use './variables';
-@use './ww/text';
-@use './ww/misc';
+/* stylelint-disable max-line-length */
+/* stylelint-disable no-invalid-position-at-import-rule */
+
+// tailwindcss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
 
 html,
-body,
-#app {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-}
-
-#app {
-  overflow: hidden;
-}
-
 body {
-  background-color: var(--grey);
-  box-sizing: border-box;
-  color: var(--text);
-  font-family: var(--mono);
-  margin: 0;
+  @apply bg-gray-100;
+
+  font-family: Inconsolata, monospace;
 }
 
 ::selection {
-  background-color: var(--red);
-  color: var(--white);
+  @apply bg-red-500 text-white;
 }
 
-.ndisplay {
-  display: none;
+.title {
+  @apply bg-yellow-50 block p-1 mb-2;
 }
 
-.nvisible {
-  visibility: hidden;
+.social {
+  @apply hover:fill-red-500 whitespace-nowrap inline-block;
 }

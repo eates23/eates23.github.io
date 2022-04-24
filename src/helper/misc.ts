@@ -3,10 +3,10 @@ const getBoolean = (value: string) => {
     return false;
   }
   switch (value.toLocaleLowerCase()) {
-  case "true":
-    return true;
-  default:
-    return false;
+    case "true":
+      return true;
+    default:
+      return false;
   }
 };
 

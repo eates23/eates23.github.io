@@ -1,69 +1,19 @@
 <script>
-import Info from "@/components/Info.svelte";
-import Links from "@/components/Links.svelte";
-import Projects from "@/components/Projects.svelte";
+  import Info from "@/components/Info.svelte";
+  import Links from "@/components/Links.svelte";
+  import Projects from "@/components/Projects.svelte";
 </script>
 
-<div class="main">
-  <div class="top">
-    <div class="info">
-      <Info/>
-    </div>
+<div class="flex flex-col gap-2 px-[5%]">
+  <div class="flex flex-wrap py-2 border-b-2 border-black mb-2">
+    <Info />
   </div>
-  <div class="bottom">
-    <div class="projects">
-      <Projects/>
+  <div class="flex flex-wrap gap-2 flex-col sm:flex-row">
+    <div class="flex-1 border-l border-black">
+      <Projects />
     </div>
-    <div class="links">
-      <Links/>
+    <div class="flex-1 border-l border-black">
+      <Links />
     </div>
   </div>
 </div>
-
-<style lang="scss">
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0 5%;
-}
-
-.top,
-.bottom {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.top {
-  border-bottom: 2px solid var(--black);
-  margin-bottom: 10px;
-  padding: 10px 0;
-}
-
-.canvas {
-  flex-basis: 0;
-  flex-grow: 1;
-  height: 280px;
-  width: 100%;
-}
-
-.info {
-  display: flex;
-  flex-basis: 0;
-  flex-grow: 1;
-  min-width: 280px;
-}
-
-.projects,
-.links {
-  border-left: 1px solid var(--black);
-  flex-basis: 0;
-  flex-grow: 1;
-  min-width: 280px;
-}
-
-.bottom {
-  gap: 10px;
-}
-
-</style>
