@@ -23,16 +23,16 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="flex flex-col gap-2 px-[5%] h-full">
+<div class="h-full flex flex-col gap-2 px-[5%]">
   <div class="flex flex-wrap py-2 border-b-2 border-black mb-2">
     <Info />
   </div>
   <div
-    class={`flex flex-wrap ${
+    class={`flex flex-1 flex-wrap ${
       trigger ? "" : "gap-2 "
-    }flex-col sm:flex-row h-full`}
+    }flex-col sm:flex-row`}
   >
-    <Flag title="Projects" class={`${trigger ? "flex-0" : "flex-1"}`}>
+    <Flag title="Projects" class={`${trigger ? "grow-0 " : ""}flex-1`}>
       <Projects />
     </Flag>
     <Flag title="Blog Posts" class="flex-1">
