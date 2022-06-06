@@ -1,19 +1,42 @@
-<script>
+<script lang="ts">
   import Info from "@/components/Info.svelte";
   import Links from "@/components/Links.svelte";
   import Projects from "@/components/Projects.svelte";
+  import Flag from "./components/Flag.svelte";
+
+  import "@/helper/get";
+
+  let innerWidth = window.innerWidth;
+
+  let trigger = false;
+
+  const eventWidth = (w: number) => {
+    if (w <= 640 && !trigger) {
+      trigger = true;
+    } else if (w > 640 && trigger) {
+      trigger = false;
+    }
+  };
+
+  $: eventWidth(innerWidth);
 </script>
 
-<div class="flex flex-col gap-2 px-[5%]">
+<svelte:window bind:innerWidth />
+
+<div class="flex flex-col gap-2 px-[5%] h-full">
   <div class="flex flex-wrap py-2 border-b-2 border-black mb-2">
     <Info />
   </div>
-  <div class="flex flex-wrap gap-2 flex-col sm:flex-row">
-    <div class="flex-1 border-l border-black">
+  <div
+    class={`flex flex-wrap ${
+      trigger ? "" : "gap-2 "
+    }flex-col sm:flex-row h-full`}
+  >
+    <Flag title="Projects" class={`${trigger ? "flex-0" : "flex-1"}`}>
       <Projects />
-    </div>
-    <div class="flex-1 border-l border-black">
+    </Flag>
+    <Flag title="Blog Posts" class="flex-1">
       <Links />
-    </div>
+    </Flag>
   </div>
 </div>

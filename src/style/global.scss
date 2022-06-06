@@ -10,7 +10,7 @@
 
 html,
 body {
-  @apply bg-gray-100;
+  @apply bg-gray-100 h-full;
 
   font-family: Inconsolata, monospace;
 }
@@ -19,10 +19,45 @@ body {
   @apply bg-red-500 text-white;
 }
 
+:root {
+  --title: #ff5c00;
+}
+
 .title {
-  @apply bg-yellow-50 block p-1 mb-2;
+  @apply block p-1 mb-2 border-t border-b border-black text-white;
+
+  background-image: linear-gradient(to left, transparent 1rem, var(--title) 1rem);
+  display: block;
+  position: relative;
+
+  // position: relative;
+
+  &::after,
+  &::before {
+    border-width: 1rem;
+    border-left-width: 0.0625rem;
+    border-right-color: transparent;
+    bottom: 0;
+    color: var(--title);
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &::before {
+    color: #000;
+  }
+
+  &::after {
+    right: 0.0625rem;
+  }
 }
 
 .social {
-  @apply hover:fill-red-500 whitespace-nowrap inline-block;
+  @apply whitespace-nowrap inline-block;
+
+  &:hover {
+    fill: var(--title);
+  }
 }

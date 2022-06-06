@@ -1,18 +1,8 @@
 <script lang="ts">
   import Linkbox from "./part/Linkbox.svelte";
+  import { storePage } from "@/store/store";
 </script>
 
-<span class="title">Blog Posts</span>
-
-<Linkbox href="https://dev.to/rytsh/go-template-playground-3gmm"
-  >Web assembly golang for template playground</Linkbox
->
-<Linkbox href="https://dev.to/rytsh/embed-map-in-json-output-5dnj"
-  >Golang embed map in json output</Linkbox
->
-<Linkbox href="https://dev.to/rytsh/change-filenames-4d9f"
-  >Change filenames recursively script</Linkbox
->
-<Linkbox href="https://dev.to/rytsh/make-icon-component-14nk"
-  >Make Icon Component</Linkbox
->
+{#each $storePage.posts as { link, title }}
+  <Linkbox href={link} {title}>{title}</Linkbox>
+{/each}
