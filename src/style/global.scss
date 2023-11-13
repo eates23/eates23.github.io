@@ -1,7 +1,6 @@
 /* stylelint-disable max-line-length */
 /* stylelint-disable no-invalid-position-at-import-rule */
 
-// tailwindcss
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,8 +28,6 @@ body {
   background-image: linear-gradient(to left, transparent 1rem, var(--title) 1rem);
   display: block;
   position: relative;
-
-  // position: relative;
 
   &::after,
   &::before {
@@ -60,4 +57,8 @@ body {
   &:hover {
     fill: var(--title);
   }
+}
+
+*,:before,:after {
+  @apply border-current;
 }
