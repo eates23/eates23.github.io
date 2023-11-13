@@ -20,19 +20,3 @@
     </span>
   </a>
 </div>
-
-<style lang="scss">
-  .webkitbox:first-of-type {
-    display: -webkit-box;
-    overflow: hidden;
-    word-break: break-all;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-  }
-
-  .hoverit:hover {
-    @apply shadow-[3px_3px_rgba(0,0,0)] bg-yellow-100;
-
-    transition: all 0.14s ease-out;
-  }
-</style>

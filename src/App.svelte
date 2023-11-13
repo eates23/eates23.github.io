@@ -27,6 +27,12 @@
   <div class="flex flex-wrap py-2 border-b-2 border-black mb-2">
     <Info />
   </div>
+  <a
+    class="py-1 px-2 border border-black bg-yellow-50 block hoverit"
+    href="/wiki"
+  >
+    Personal Wiki
+  </a>
   <div
     class={`flex flex-1 flex-wrap ${
       trigger ? "" : "gap-2 "
