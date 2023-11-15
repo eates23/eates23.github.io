@@ -1,6 +1,5 @@
 <script lang="ts">
   import Info from "@/components/Info.svelte";
-  import Links from "@/components/Links.svelte";
   import Projects from "@/components/Projects.svelte";
   import Flag from "./components/Flag.svelte";
 
@@ -41,8 +40,8 @@
     <Flag title="Projects" class={`${trigger ? "grow-0 " : ""}flex-1`}>
       <Projects />
     </Flag>
-    <Flag title="Blog Posts" class="flex-1">
+    <!-- <Flag title="Blog Posts" class="flex-1">
       <Links />
-    </Flag>
+    </Flag> -->
   </div>
 </div>
