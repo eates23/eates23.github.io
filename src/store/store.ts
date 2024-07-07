@@ -11,14 +11,14 @@ type Link = {
 
 type Page = {
   projects: Link[];
-  posts?: Link[];
+  posts: Link[];
 }
 
 const storePage = writable({ projects: [], posts: [] } as Page);
 
 (async () => {
   const data = await getReq(pageURL);
-  storePage.set({ projects: data });
+  storePage.set({ projects: data || [], posts: [] });
 })();
 
 export { storePage };
