@@ -28,7 +28,7 @@
   </div>
   <a
     class="py-1 px-2 border border-black bg-yellow-50 block hoverit"
-    href="/wiki"
+    href="https://wiki.rytsh.io"
   >
     Personal Wiki
   </a>
